@@ -1,0 +1,107 @@
+/* Additional classes */
+
+ .marketing-blocks {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ }
+
+ .marketing-block {
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    padding: 5%;
+    color: #fff;
+    background-color: #003366;
+    border: 2px solid #fff;
+    opacity: 0.70;
+    text-align: left;
+    border-radius: 5px;
+ }
+
+ @media all and (min-width: 800px) {
+    .marketing-block { width: 24%; }
+}
+
+.marketing-block a { 
+    color: #fff; 
+
+    &:hover {
+     opacity: 1;
+     color:#fff;
+    }
+}
+
+.SHmainContent      {background-color: #003366; color: #fff;}
+.SHprojectContent   {background-color: #a63610; color: #fff;}
+.SHeducationContent {background-color: #9BAC2A; color: #fff;}
+.SHresourcesContent {background-color: #6e5400; color: #fff;}
+
+.flexHover:Hover { opacity: 1; }
+
+@media all {
+  .SHmainContent      { order: 1; } 
+  .SHprojectContent   { order: 2; }
+  .SHeducationContent { order: 3; }
+  .SHresourceContent  { order: 4; }
+}
+
+ .contact-info-block {
+	background-color:#efefef; 
+	color:#373e45; 
+	max-width: 960px; 
+	margin: 0 auto; 
+	padding: 20px; 
+	overflow: hidden;
+ }
+
+ .contact-info-columns {
+    -webkit-column-count: 2; 
+    column-count: 2;
+ }
+
+@media screen and (max-width: 799px) {
+	.contact-info-columns {
+    	-webkit-column-count: 1; 
+    	column-count: 1;
+  	}
+}
+
+.social-media-container {
+	background-color:#efefef; 
+	width: 100%; 
+	margin: auto; 
+	padding: 10px; 
+}
+
+/* Overrides */
+.button {
+    font-family: $body-font;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    background-color: #a63610;
+    text-align: center;
+    padding: $spacing-s;
+    border-radius: 2px;
+    color: $gray;
+    line-height: $base-line-height;
+    display: inline-block;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #003366;
+        color: #fff;
+        border-bottom-width: 0px;
+    }
+
+    &.inactive {
+        background-color: rgba(0,0,0,0.06);
+        color: #999;;
+    }
+}
